@@ -18,20 +18,20 @@ const router = createRouter({
       component: () => import('../views/AboutView.vue')
     },
     {
-      path: '/cart',
-      name: 'cart',
+      path: '/starred',
+      name: 'starred',
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import('../views/CartView.vue')
+      component: () => import('../views/StarredView.vue')
     },
     {
-      path: '/:id',
-      name: 'element',
+      path: '/:placeList',
+      name: 'placeList',
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import('../views/InfoView.vue')
+      component: () => import('../views/PlaceList.vue')
     },
   ]
 })

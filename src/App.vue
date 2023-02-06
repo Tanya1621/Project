@@ -9,7 +9,7 @@ import { RouterLink, RouterView } from 'vue-router'
       <nav class="flex justify-start gap-4">
         <RouterLink to="/" class="text-xl text-black hover:text-opacity-70 p-4">Places</RouterLink>
         <RouterLink to="/about" class="text-xl text-black hover:text-opacity-70 p-4">About</RouterLink>
-        <RouterLink to="/cart" class="text-xl text-black hover:text-opacity-70 p-4">New</RouterLink>
+        <RouterLink to="/starred" class="text-xl text-black hover:text-opacity-70 p-4">Starred</RouterLink>
       </nav>
     </div>
   </header>
@@ -19,7 +19,8 @@ import { RouterLink, RouterView } from 'vue-router'
 <style scoped>
 header {
   line-height: 1.5;
-  max-height: 100vh;
+  margin-bottom: 50px;
+
 }
 
 .header__heading {
