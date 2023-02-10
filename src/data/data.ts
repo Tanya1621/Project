@@ -7,6 +7,7 @@ export interface IContent {
 
 export interface IPlace {
   name: string,
+  id: string,
   shortDesc: string,
   description: string,
   image: string,
@@ -41,6 +42,7 @@ export const places: IPlace[] = [
   {
     name: "Mega Giga Park",
     shortDesc: "This park is located in the city center. It is good for children",
+    id:'1',
     description: "",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Halleyparknovember.jpg/1200px-Halleyparknovember.jpg",
     starred: false,
@@ -49,6 +51,7 @@ export const places: IPlace[] = [
   },
   {
     name: "Mega Giga Park",
+    id: '2',
     shortDesc: "This park is located in the city center. It is good for children",
     description: "",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Halleyparknovember.jpg/1200px-Halleyparknovember.jpg",
@@ -58,8 +61,9 @@ export const places: IPlace[] = [
   },
   {
     name: "Mega Giga Park",
+    id: '3',
     shortDesc: "This park is located in the city center. It is good for children",
-    description: "",
+    description: "loremnjsdcjnsjebcview kcjewiciweuhg iuhviwuhoiehufiuw uhiwefhiufiuwe iubiwuehfohw iuhwefihiefwh uhfewuyfewg hbvuufy hcd",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Halleyparknovember.jpg/1200px-Halleyparknovember.jpg",
     starred: false,
     liked: false,
@@ -67,6 +71,7 @@ export const places: IPlace[] = [
   },
   {
     name: "Tel Aviv Cinema",
+    id: '4',
     shortDesc: "Watch the best films here",
     description: "",
     image: "https://shimeba.blob.core.windows.net/shimeba-new-container/30a0c96dc1d6480bb707437a57bf0b5e.jpg",
@@ -76,6 +81,7 @@ export const places: IPlace[] = [
   },
   {
     name: "Tel Aviv Cinema",
+    id: '5',
     shortDesc: "Watch the best films here",
     description: "",
     image: "https://shimeba.blob.core.windows.net/shimeba-new-container/30a0c96dc1d6480bb707437a57bf0b5e.jpg",
@@ -85,6 +91,7 @@ export const places: IPlace[] = [
   },
   {
     name: "Tel Aviv Cinema",
+    id: '6',
     shortDesc: "Watch the best films here",
     description: "",
     image: "https://shimeba.blob.core.windows.net/shimeba-new-container/30a0c96dc1d6480bb707437a57bf0b5e.jpg",
@@ -94,6 +101,7 @@ export const places: IPlace[] = [
   },
   {
     name: "Cafe Pua",
+    id: '7',
     shortDesc: " On Saturdays, the entire alley becomes a recreation area and a cafeteria, and kids are offered theatrical story hours",
     description: "",
     image: 'https://media.timeout.com/images/103715654/1536/1152/image.jpg',
@@ -103,6 +111,7 @@ export const places: IPlace[] = [
   },
   {
     name: "Cafe Pua",
+    id: '8',
     shortDesc: " On Saturdays, the entire alley becomes a recreation area and a cafeteria, and kids are offered theatrical story hours",
     description: "",
     image: 'https://media.timeout.com/images/103715654/1536/1152/image.jpg',
@@ -112,6 +121,7 @@ export const places: IPlace[] = [
   },
   {
     name: "Cafe Pua",
+    id: '9',
     shortDesc: " On Saturdays, the entire alley becomes a recreation area and a cafeteria, and kids are offered theatrical story hours",
     description: "",
     image: 'https://media.timeout.com/images/103715654/1536/1152/image.jpg',

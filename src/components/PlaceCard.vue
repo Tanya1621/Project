@@ -13,7 +13,7 @@
       </svg>
     </div>
     <div class="place__bottom p-4">
-      <a class="place__name text-3xl text-decoration-line: underline" href="https://google.com">{{placeInfo.name}}</a>
+      <RouterLink :to="'/' + placeInfo.category + '/' + placeInfo.id"><a class="place__name text-3xl text-decoration-line: underline">{{placeInfo.name}}</a></RouterLink>
       <p class="place__short-desc text-large">{{placeInfo.shortDesc}}</p>
       <div class="place__like hover:opacity-70" @click="toggle('like')">
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -32,12 +32,16 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import type { IPlace } from "@/data/data";
+import { useItemsStore } from "@/stores/placesStore";
 
 export default defineComponent({
   name: "PlaceCard",
   props: {
     placeInfo: Object
+  },
+  setup() {
+    const store = useItemsStore()
+    return {addToStarred: store.addItemToStarred}
   },
   data() {
     return { toggling: { "like": false, "star": false } };
@@ -46,6 +50,9 @@ export default defineComponent({
     toggle: function(el: "like" | "star") {
       console.log(this.toggling[el]);
       this.toggling[el] = !this.toggling[el];
+      if (el === 'star' && this.toggling[el] && this.placeInfo) {
+        this.addToStarred(this.placeInfo)
+      }
     }
 
   }

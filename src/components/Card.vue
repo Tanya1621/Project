@@ -12,7 +12,6 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import type { IContent } from "@/data/data";
 
 export default defineComponent({
   name: "CardComponent",
