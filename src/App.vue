@@ -4,7 +4,6 @@ import { RouterLink, RouterView } from 'vue-router'
 
 <template>
   <header>
-    <h1 class="header__heading mb-4">2Go</h1>
     <div class="wrapper">
       <nav class="flex justify-start gap-4">
         <RouterLink to="/" class="text-xl text-black hover:text-opacity-70 p-4">Places</RouterLink>

@@ -1,23 +1,23 @@
 <template>
-  <div class="place">
+  <div class="place" v-if="placeInfo">
     <img class="place__image w-full h-4/6"
          :src="placeInfo.image">
     <div class="place__star hover:opacity-70" @click="toggle('star')">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-        <path v-if="toggling.star" fill="yellow"
+        <path v-if="placeInfo.starred" fill="#fe6e2a"
               d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
 
         <path v-else
               d="M12 5.173l2.335 4.817 5.305.732-3.861 3.71.942 5.27-4.721-2.524-4.721 2.525.942-5.27-3.861-3.71 5.305-.733 2.335-4.817zm0-4.586l-3.668 7.568-8.332 1.151 6.064 5.828-1.48 8.279 7.416-3.967 7.416 3.966-1.48-8.279 6.064-5.827-8.332-1.15-3.668-7.569z"
-              fill="yellow" />
+              fill="#fe6e2a" />
       </svg>
     </div>
     <div class="place__bottom p-4">
       <RouterLink :to="'/' + placeInfo.category + '/' + placeInfo.id"><a class="place__name text-3xl text-decoration-line: underline">{{placeInfo.name}}</a></RouterLink>
       <p class="place__short-desc text-large">{{placeInfo.shortDesc}}</p>
-      <div class="place__like hover:opacity-70" @click="toggle('like')">
+      <div class="place__like hover:opacity-70" @click="toggleLikeFunction">
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path v-if="toggling.like" fill-rule="evenodd" clip-rule="evenodd"
+          <path v-if="placeInfo.liked" fill-rule="evenodd" clip-rule="evenodd"
                 d="M20.2991 1.68186C22.567 3.90213 22.567 7.54338 20.2991 9.78586L10.9804 19L1.6841 9.80806C0.606277 8.72013 0 7.27695 0 5.74496C0 4.21297 0.583823 2.76979 1.6841 1.68186C3.92957 -0.560619 7.61215 -0.560619 9.88007 1.70406L10.9804 2.792L12.0806 1.68186C14.3486 -0.560619 18.0311 -0.560619 20.2991 1.68186Z"
                 fill="black" />
           <path v-else
@@ -41,17 +41,22 @@ export default defineComponent({
   },
   setup() {
     const store = useItemsStore()
-    return {addToStarred: store.addItemToStarred}
-  },
-  data() {
-    return { toggling: { "like": false, "star": false } };
+    return {addToStarred: store.addItemToStarred, removeFromStarred: store.removeFromStarred, toggleLike: store.toggleLike}
   },
   methods: {
-    toggle: function(el: "like" | "star") {
-      console.log(this.toggling[el]);
-      this.toggling[el] = !this.toggling[el];
-      if (el === 'star' && this.toggling[el] && this.placeInfo) {
+    toggle: function() {
+      if(this.placeInfo) {
+      if (!this.placeInfo.starred && this.placeInfo) {
+        this.placeInfo.starred = true;
         this.addToStarred(this.placeInfo)
+      } else if (this.placeInfo.starred && this.placeInfo) {
+        this.placeInfo.starred = false;
+        this.removeFromStarred(this.placeInfo.id)
+      }}
+    },
+    toggleLikeFunction: function() {
+      if(this.placeInfo) {
+       this.toggleLike(this.placeInfo.id)
       }
     }
 

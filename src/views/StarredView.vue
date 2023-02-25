@@ -20,6 +20,7 @@ export default defineComponent ({
   },
   computed: {
     starred() {
+      console.log('starred')
       return this.store.starred
       }
     }
