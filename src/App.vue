@@ -6,9 +6,9 @@ import { RouterLink, RouterView } from 'vue-router'
   <header>
     <div class="wrapper">
       <nav class="flex justify-start gap-4">
-        <RouterLink to="/" class="text-xl text-black hover:text-opacity-70 p-4">Places</RouterLink>
-        <RouterLink to="/about" class="text-xl text-black hover:text-opacity-70 p-4">About</RouterLink>
-        <RouterLink to="/starred" class="text-xl text-black hover:text-opacity-70 p-4">Starred</RouterLink>
+        <RouterLink to="/Project/" class="text-xl text-black hover:text-opacity-70 p-4">Places</RouterLink>
+        <RouterLink to="/Project/about" class="text-xl text-black hover:text-opacity-70 p-4">About</RouterLink>
+        <RouterLink to="/Project/starred" class="text-xl text-black hover:text-opacity-70 p-4">Starred</RouterLink>
       </nav>
     </div>
   </header>

@@ -2,7 +2,7 @@
   <div class="place" v-if="placeInfo">
     <img class="place__image w-full h-4/6"
          :src="placeInfo.image">
-    <div class="place__star hover:opacity-70" @click="toggle('star')">
+    <div class="place__star hover:opacity-70" @click="toggle">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
         <path v-if="placeInfo.starred" fill="#fe6e2a"
               d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
@@ -13,7 +13,7 @@
       </svg>
     </div>
     <div class="place__bottom p-4">
-      <RouterLink :to="'/' + placeInfo.category + '/' + placeInfo.id"><a class="place__name text-3xl text-decoration-line: underline">{{placeInfo.name}}</a></RouterLink>
+      <RouterLink :to="'/Project/' + placeInfo.category + '/' + placeInfo.id"><a class="place__name text-3xl text-decoration-line: underline">{{placeInfo.name}}</a></RouterLink>
       <p class="place__short-desc text-large">{{placeInfo.shortDesc}}</p>
       <div class="place__like hover:opacity-70" @click="toggleLikeFunction">
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -20,7 +20,7 @@
       </div>
     </div>
   </div>
-  <ReviewsArea :id="place.id" :reviews="place.reviews"></ReviewsArea>
+  <ReviewsArea v-if="place" :id="place.id" :reviews="place.reviews"></ReviewsArea>
 </template>
 
 <script lang="ts">

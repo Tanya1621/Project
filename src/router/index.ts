@@ -5,12 +5,12 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: "/",
+      path: "/Project/",
       name: "home",
       component: () => import("../views/HomeView.vue")
     },
     {
-      path: "/about",
+      path: "/Project/about",
       name: "about",
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
@@ -18,7 +18,7 @@ const router = createRouter({
       component: () => import("../views/AboutView.vue")
     },
     {
-      path: "/starred",
+      path: "/Project/starred",
       name: "starred",
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
@@ -26,11 +26,11 @@ const router = createRouter({
       component: () => import("../views/StarredView.vue")
     },
     {
-      path: "/:placeList",
+      path: "/Project/:placeList",
       name: "placeList",
       component: () => import("../views/PlaceList.vue")
     }, {
-      path: "/:placeList/:place",
+      path: "/Project/:placeList/:place",
       name: "PlaceInfo",
       component: () => import("../views/PlaceInfo.vue")
     }

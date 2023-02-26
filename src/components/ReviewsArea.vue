@@ -2,8 +2,8 @@
   <button @click="openPopup" class="write-review__button text-white text-xl my-4">Write a review</button>
   <div class="reviews-area__wrapper flex flex-col gap-4">
     <div class="reviews-area__review w-full" v-for="each in reviews">
-      <p class="text-2xl mb-2">{{ each.author}}</p>
-      <p class="text-xl">{{ each.review }}</p>
+      <p v-if="each.author" class="text-2xl mb-2">{{ each.author}}</p>
+      <p v-if="each.review" class="text-xl">{{ each.review }}</p>
     </div>
   </div>
   <div v-if='popupOpened' class="popup" @click="closePopup">
@@ -18,17 +18,25 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent} from "vue";
+import type { PropType } from "vue";
 import { useItemsStore } from "@/stores/placesStore";
 type review = {
   author: string,
   review: string
 }
+// interface Props {
+//   id: string
+//   reviews: review[]
+// }
+//
+// const props = defineProps<Props>()
+
 export default defineComponent({
   name: "ReviewsArea",
   props: {
     id: String,
-    reviews: Array
+    reviews: Array as PropType<review[]>
   },
   setup() {
     const store = useItemsStore()

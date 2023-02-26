@@ -3,7 +3,7 @@
     <h2 class="card__name text-4xl text-white mt-5 ml-5">{{ card.title }}</h2>
     <img :src="card.image" class="w-96 card_image" :alt="card.title" />
     <div class="caption h-2.5 bg-amber-600 w-100 my-1.5">
-      <router-link class="text-black hover:text-pink-300" :to="'/' + card.name"
+      <router-link class="text-black hover:text-pink-300" :to="'/Project/' + card.name"
       ><p class="text-6xl text-white text-center">GO</p></router-link
       >
     </div>
