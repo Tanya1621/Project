@@ -4,6 +4,9 @@ import { RouterLink, RouterView } from 'vue-router'
 
 <template>
   <header>
+    <div class="header__logo-area">
+    <img src="../src/assets/img/Untitled.png" class="header__logo">
+    </div>
     <div class="wrapper">
       <nav class="flex justify-start gap-4">
         <RouterLink to="/Project/" class="text-xl text-black hover:text-opacity-70 p-4">Places</RouterLink>
@@ -21,6 +24,12 @@ header {
   margin-bottom: 50px;
 
 }
+
+.header__logo {
+  width: 400px;
+  margin: 20px 0;
+}
+
 
 .header__heading {
   font-family: 'Open Sans', sans-serif;
