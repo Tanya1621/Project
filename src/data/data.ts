@@ -20,6 +20,8 @@ export interface IPlace {
   starred: boolean,
   category: string,
   reviews: review[],
+  link:string,
+  address: string,
 }
 
 
@@ -56,7 +58,9 @@ export const places: IPlace[] = [
     starred: false,
     category: 'parks',
     liked: false,
-    reviews: []
+    reviews: [],
+    link:"http://park.co.il",
+    address: "Rokach Blvd, Tel Aviv-Yafo",
   },
   {
     name: "Independence Park",
@@ -73,7 +77,9 @@ export const places: IPlace[] = [
     starred: false,
     category: 'parks',
     liked: false,
-    reviews: []
+    reviews: [],
+    link:"https://israelbusinessguide.com",
+    address: "HaYarkon St, Tel Aviv-Yafo",
   },
   {
     name: "Meir Park",
@@ -84,7 +90,9 @@ export const places: IPlace[] = [
     starred: false,
     liked: false,
     category: 'parks',
-    reviews: []
+    reviews: [],
+    link:"Tchernikhovski St 24, Tel Aviv-Yafo",
+    address: ""
   },
   {
     name: "Rav Chen Dizengoff",
@@ -95,7 +103,9 @@ export const places: IPlace[] = [
     starred: false,
     liked: false,
     category: 'movies',
-    reviews: []
+    reviews: [],
+    link:"https://www.rav-hen.co.il/",
+    address: "Ben Ami St 16, Tel Aviv-Yafo"
 
   },
   {
@@ -107,7 +117,9 @@ export const places: IPlace[] = [
     starred: false,
     liked: false,
     category: 'movies',
-    reviews: []
+    reviews: [],
+    link:"https://www.lev.co.il/",
+    address: "Dizengoff St 50, Tel Aviv-Yafo"
 
   },
   {
@@ -119,11 +131,13 @@ export const places: IPlace[] = [
     starred: false,
     liked: false,
     category: 'movies',
-    reviews: []
+    reviews: [],
+    link:"https://www.cinema.co.il",
+    address: "HaArba'a St 5, Tel Aviv-Yafo"
 
   },
   {
-    name: "Cafe Pua",
+    name: "Cafe Puaa",
     id: '7',
     shortDesc: " On Saturdays, the entire alley becomes a recreation area and a cafeteria, and kids are offered theatrical story hours",
     description: "",
@@ -131,11 +145,13 @@ export const places: IPlace[] = [
     starred: false,
     liked: false,
     category: 'food',
-    reviews: []
+    reviews: [],
+    link:"https://ontopo.co.il/puaa",
+    address: "Rabbi Yohanan St 8, Tel Aviv-Yafo"
 
   },
   {
-    name: "Cafe Pua",
+    name: "Cafe Puaa",
     id: '8',
     shortDesc: " On Saturdays, the entire alley becomes a recreation area and a cafeteria, and kids are offered theatrical story hours",
     description: "Charming, cozy, and quirky, Café Puaa is a Jaffa neighborhood staple. Located in the heart of Jaffa’s flea market, this iconic café feels like a retro living room. Its colorful carpets, antique ornaments and comfy couches give the restaurant a homey, authentic feel. Plus, Puaa embodies the spirit of its flea market surroundings, whereby every piece of furniture is for sale! But, what makes Puaa truly special are its wholesome, unique Mediterranean dishes. Treat yourself to their famous curried pumpkin dumplings, their hearty moussaka with quinoa and feta cheese or their all-day breakfast (yep, you heard me right). Each dish is creative and packs a flavourful punch - it’s no wonder Puaa’s loyal customers leave in good spirits, even when the weather is grey.",
@@ -143,11 +159,13 @@ export const places: IPlace[] = [
     starred: false,
     liked: false,
     category: 'food',
-    reviews: []
+    reviews: [],
+    link:"https://ontopo.co.il/puaa",
+    address: "Rabbi Yohanan St 8, Tel Aviv-Yafo"
 
   },
   {
-    name: "Cafe Pua",
+    name: "Cafe Puaa",
     id: '9',
     shortDesc: " On Saturdays, the entire alley becomes a recreation area and a cafeteria, and kids are offered theatrical story hours",
     description: "",
@@ -155,7 +173,9 @@ export const places: IPlace[] = [
     starred: false,
     liked: false,
     category: 'food',
-    reviews: []
+    reviews: [],
+    link:"https://ontopo.co.il/puaa",
+    address: "Rabbi Yohanan St 8, Tel Aviv-Yafo"
 
   },
 ];

@@ -7,11 +7,11 @@
       <div class="description-wrapper">
         <div class="location__wrapper flex items-center mb-4 gap-2">
           <img class="location__image" src="/src/assets/img/location_icon.png">
-          <p class="text-xl text-white">It is an address</p>
+          <p class="text-xl text-white">{{ place.address}}</p>
         </div>
         <div class="location__wrapper flex items-center gap-2">
           <img class="location__image" src="/src/assets/img/link_icon.png">
-          <p class="text-xl text-white">It is a link</p>
+          <a :href="place.link" class="text-xl text-white">{{ place.link}}</a>
         </div>
       </div>
       <div class="description-wrapper h-full">
