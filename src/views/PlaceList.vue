@@ -26,9 +26,9 @@ export default defineComponent({
 
 
 <template>
-  <div class="place_list flex flex-wrap gap-4">
+  <ul class="place_list flex flex-wrap gap-4 my-14">
     <PlaceCard v-for="place in placesArray" :placeInfo="place"></PlaceCard>
-  </div>
+  </ul>
 </template>
 
 <style>

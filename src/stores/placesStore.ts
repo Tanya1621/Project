@@ -25,24 +25,15 @@ export const useItemsStore = defineStore("itemsStore",  {
     actions: {
       addItemToStarred(newItem: any) {
         this.starred = [...this.starred, newItem]
-        console.log(this.starred)
       },
       removeFromStarred(id: any) {
         this.starred = this.starred.filter(el => el.id !== id)
       },
-      toggleLike(id: any) {
-        const element = this.allPlaces.find(el => el.id === id)
-        if (element) {
-          element.liked = !element.liked
-        }
-      },
       addReview(id: any, newReview: review) {
         const element = this.allPlaces.find(el => el.id === id)
-        console.log(element)
         if (element) {
           element.reviews = [...element.reviews, newReview]
         }
-        console.log('something blslsls')
       }
     }
 });

@@ -1,13 +1,14 @@
 <template>
+  <router-link class="text-black hover:text-pink-300" :to="'/Project/' + card.name"
+  >
   <div class="card_list__card">
     <h2 class="card__name text-4xl text-white mt-5 ml-5">{{ card.title }}</h2>
     <img :src="card.image" class="w-96 card_image" :alt="card.title" />
     <div class="caption h-2.5 bg-amber-600 w-100 my-1.5">
-      <router-link class="text-black hover:text-pink-300" :to="'/Project/' + card.name"
-      ><p class="text-6xl text-white text-center">GO</p></router-link
-      >
+      <p class="text-6xl text-white text-center">GO</p>
     </div>
   </div>
+  </router-link>
 </template>
 
 <script lang="ts">
@@ -35,9 +36,14 @@ export default defineComponent({
   height: 450px;
   border-radius: 20px;
   background-color: white;
-  box-shadow: 0 0 10px 0px #e3cafa;
   overflow: hidden;
   position: relative;
+  box-shadow: 0 0 10px 0px #e3cafa;
+  transition: all .3s ease;
+}
+
+.card_list__card:hover {
+  box-shadow: 0 0 15px 0px #b89ad3;
 }
 
 .card_list__card::after {

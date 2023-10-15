@@ -2,7 +2,7 @@
   <div class="starred">
     <div class="place_list flex flex-wrap gap-4">
     <PlaceCard v-for="place in starred" :placeInfo="place" v-if="starred && starred.length"></PlaceCard>
-    <p v-else> It seems like your starred list is empty! Add something here :)</p>
+    <p class="text-xl" v-else> It seems like your starred list is empty! Add something cool here :)</p>
       </div>
   </div>
 </template>
