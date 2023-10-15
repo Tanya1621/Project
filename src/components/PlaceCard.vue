@@ -1,5 +1,5 @@
 <template>
-  <RouterLink :to="'/Project/' + placeInfo.category + '/' + placeInfo.id">
+  <RouterLink v-if="placeInfo && placeInfo.category && placeInfo.id" :to="'/Project/' + placeInfo.category + '/' + placeInfo.id">
   <div class="place" v-if="placeInfo" >
     <img class="place__image w-full h-4/6"
          :src="placeInfo.image">

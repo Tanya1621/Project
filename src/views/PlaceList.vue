@@ -1,8 +1,6 @@
 <script lang="ts">
 import { defineComponent } from "vue";
-import { cards } from "@/data/data";
 import PlaceCard from "@/components/PlaceCard.vue";
-import { places } from "@/data/data";
 import { useItemsStore } from "@/stores/placesStore";
 
 export default defineComponent({
